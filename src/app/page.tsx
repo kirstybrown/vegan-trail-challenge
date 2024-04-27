@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <span className="font-bold text-4xl">Home</span>
+      <span className="font-bold text-4xl">Vegan Trail Challenge</span>
       <div className="border-dashed border border-zinc-500 w-full h-12 rounded-lg"></div>
       <div className="border-dashed border border-zinc-500 w-full h-64 rounded-lg"></div>
       <div className="border-dashed border border-zinc-500 w-full h-64 rounded-lg"></div>

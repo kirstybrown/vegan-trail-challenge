@@ -5,3 +5,10 @@ export type SideNavItem = {
   submenu?: boolean;
   subMenuItems?: SideNavItem[];
 };
+
+export type RaceItem = {
+  title: string;
+  distance: string;
+  ascent: string;
+  photo: string;
+};

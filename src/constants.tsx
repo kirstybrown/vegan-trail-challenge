@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 
-import { SideNavItem } from "./types";
+import { RaceItem, SideNavItem } from "./types";
 
 export const SIDENAV_ITEMS: SideNavItem[] = [
   {
@@ -52,4 +52,16 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     path: "/contact",
     icon: <Icon icon="lucide:help-circle" width="24" height="24" />,
   },
+];
+
+export const RACE_DETAILS: RaceItem[] = [
+  { title: "mini", distance: "12", ascent: "500", photo: "/photo-mini.png" },
+  { title: "half", distance: "12", ascent: "500", photo: "/photo-mini.png" },
+  {
+    title: "marathon",
+    distance: "12",
+    ascent: "500",
+    photo: "/photo-mini.png",
+  },
+  { title: "ultra", distance: "12", ascent: "500", photo: "/photo-mini.png" },
 ];
