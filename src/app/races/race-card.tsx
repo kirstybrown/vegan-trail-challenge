@@ -10,13 +10,13 @@ type RaceCardProps = {
 const RaceCard = ({ title, distance, ascent, photo }: RaceCardProps) => {
   return (
     <>
-      <div className="max-w-xs rounded overflow-hidden shadow-lg">
+      <div className="max-w-md rounded overflow-hidden shadow-lg sm:w-100">
         <Image
           className="w-full"
           src={photo}
           alt={title}
-          width={24}
-          height={24}
+          width={100}
+          height={50}
         />
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2 text-center">{title}</div>

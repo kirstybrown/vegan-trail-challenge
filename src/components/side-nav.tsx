@@ -18,9 +18,17 @@ const SideNav = () => {
           className="flex flex-row space-x-3 items-center justify-center md:justify-start md:px-6 border-b border-zinc-200 h-12 w-full"
         >
           <span className="h-7 w-15 bg-zinc-300 rounded-lg" />
-          <span className="font-bold text-l hidden md:flex">
-            Vegan Trail Challenge
-          </span>
+          <img
+            className="w-10 h-10"
+            src="https://img.icons8.com/ios/50/vegetarian-mark.png"
+            alt="vegetarian-mark"
+          />
+
+          <div className="flex items-center">
+            <span className="font-bold text-l hidden md:flex text-center">
+              Vegan Trail Challenge
+            </span>
+          </div>
         </Link>
 
         <div className="flex flex-col space-y-2  md:px-6 ">

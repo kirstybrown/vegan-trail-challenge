@@ -15,16 +15,18 @@ const Home = () => {
       </div>
 
       {/* Races section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {RACE_DETAILS.map((race) => (
-          <RaceCard
-            key={race.title}
-            title={race.title}
-            distance={race.distance}
-            ascent={race.ascent}
-            photo={race.photo}
-          />
-        ))}
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {RACE_DETAILS.map((race) => (
+            <RaceCard
+              key={race.title}
+              title={race.title}
+              distance={race.distance}
+              ascent={race.ascent}
+              photo={race.photo}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
