@@ -10,7 +10,7 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
   {
     title: "Races",
     path: "/races",
-    icon: <Icon icon="lucide:folder" width="24" height="24" />,
+    icon: <Icon icon="lucide:footprints" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
       // { title: "All", path: "/races" },
@@ -23,12 +23,12 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
   {
     title: "Registration",
     path: "/registration",
-    icon: <Icon icon="lucide:mail" width="24" height="24" />,
+    icon: <Icon icon="lucide:square-pen" width="24" height="24" />,
   },
   {
     title: "Info",
     path: "/info",
-    icon: <Icon icon="lucide:settings" width="24" height="24" />,
+    icon: <Icon icon="lucide:help-circle" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
       { title: "Timetable", path: "/info/timetable" },
@@ -39,17 +39,17 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
   {
     title: "Gallery",
     path: "/gallery",
-    icon: <Icon icon="lucide:help-circle" width="24" height="24" />,
+    icon: <Icon icon="lucide:camera" width="24" height="24" />,
   },
   {
     title: "Results",
     path: "/results",
-    icon: <Icon icon="lucide:help-circle" width="24" height="24" />,
+    icon: <Icon icon="lucide:trophy" width="24" height="24" />,
   },
   {
     title: "Contact",
     path: "/contact",
-    icon: <Icon icon="lucide:help-circle" width="24" height="24" />,
+    icon: <Icon icon="lucide:mail" width="24" height="24" />,
   },
 ];
 
