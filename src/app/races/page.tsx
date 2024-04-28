@@ -5,12 +5,13 @@ const RacesPage = () => {
   return (
     <>
       <h1>RacesPage</h1>
-      {RACE_DETAILS.map((races) => (
+      {RACE_DETAILS.map((race) => (
         <RaceCard
-          title={races.title}
-          distance={races.distance}
-          ascent={races.ascent}
-          photo={races.photo}
+          key={race.title}
+          title={race.title}
+          distance={race.distance}
+          ascent={race.ascent}
+          photo={race.photo}
         />
       ))}
     </>

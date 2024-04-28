@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import HeaderMobile from "@/components/header-mobile";
 import MarginWidthWrapper from "@/components/margin-width-wrapper";
@@ -13,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Vegan Trail Challenge",
-  description: "A la aventura...",
+  description: "Let the adventure start...",
 };
 
 export default function RootLayout({
@@ -30,7 +31,11 @@ export default function RootLayout({
             <MarginWidthWrapper>
               <Header />
               <HeaderMobile />
-              <PageWrapper>{children}</PageWrapper>
+              <div className="flex flex-col flex-grow">
+                <PageWrapper>{children}</PageWrapper>
+              </div>
+
+              <Footer />
             </MarginWidthWrapper>
           </main>
         </div>

@@ -1,5 +1,4 @@
-import { Icon } from "@iconify/react";
-
+import Icon from "./components/icon";
 import { RaceItem, SideNavItem } from "./types";
 
 export const SIDENAV_ITEMS: SideNavItem[] = [
@@ -14,7 +13,7 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     icon: <Icon icon="lucide:folder" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
-      { title: "All", path: "/races" },
+      // { title: "All", path: "/races" },
       { title: "Mini", path: "/races/mini" },
       { title: "Half", path: "/races/half" },
       { title: "Marathon", path: "/races/marathon" },
@@ -56,12 +55,12 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
 
 export const RACE_DETAILS: RaceItem[] = [
   { title: "mini", distance: "12", ascent: "500", photo: "/photo-mini.png" },
-  { title: "half", distance: "12", ascent: "500", photo: "/photo-mini.png" },
+  { title: "half", distance: "21", ascent: "1000", photo: "/photo-half.png" },
   {
     title: "marathon",
-    distance: "12",
-    ascent: "500",
-    photo: "/photo-mini.png",
+    distance: "42",
+    ascent: "2000",
+    photo: "/photo-marathon.png",
   },
-  { title: "ultra", distance: "12", ascent: "500", photo: "/photo-mini.png" },
+  { title: "ultra", distance: "60", ascent: "3000", photo: "/photo-ultra.png" },
 ];
