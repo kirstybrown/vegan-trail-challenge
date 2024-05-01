@@ -26,6 +26,11 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     icon: <Icon icon="lucide:square-pen" width="24" height="24" />,
   },
   {
+    title: "Food",
+    path: "/food",
+    icon: <Icon icon="lucide:pizza" width="24" height="24" />,
+  },
+  {
     title: "Info",
     path: "/info",
     icon: <Icon icon="lucide:help-circle" width="24" height="24" />,
@@ -54,13 +59,23 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
 ];
 
 export const RACE_DETAILS: RaceItem[] = [
-  { title: "mini", distance: "12", ascent: "500", photo: "/photo-mini.png" },
-  { title: "half", distance: "21", ascent: "1000", photo: "/photo-half.png" },
   {
-    title: "marathon",
+    title: "MINI",
+    distance: "12",
+    ascent: "500",
+    colour: "green0",
+  },
+  { title: "HALF", distance: "21", ascent: "1000", colour: "orange" },
+  {
+    title: "MARATHON",
     distance: "42",
     ascent: "2000",
-    photo: "/photo-marathon.png",
+    colour: "blue",
   },
-  { title: "ultra", distance: "60", ascent: "3000", photo: "/photo-ultra.png" },
+  {
+    title: "ULTRA",
+    distance: "60",
+    ascent: "3000",
+    colour: "red",
+  },
 ];
