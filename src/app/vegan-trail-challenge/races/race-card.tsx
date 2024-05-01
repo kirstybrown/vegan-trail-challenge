@@ -1,3 +1,5 @@
+import { RACE_DETAILS } from "@/constants";
+
 type RaceDetailProps = {
   title: string;
   distance: string;
@@ -6,22 +8,18 @@ type RaceDetailProps = {
 };
 
 const RaceCard = ({ title, distance, ascent }: RaceDetailProps) => {
-  const raceColours: { [key: string]: string } = {
-    MINI: "bg-blue-500",
-    HALF: "bg-green-500",
-    MARATHON: "bg-yellow-500",
-    ULTRA: "bg-purple-500",
-  };
-
-  const defaultColour = "bg-gray-500";
-  const colour = raceColours[title] || defaultColour;
+  const race = RACE_DETAILS.find((race) => race.title === title);
+  const bgColour = race ? `bg-${race.colour}-500` : "bg-blue-500";
+  const hoverColour = race ? `bg-${race.colour}-800` : "bg-blue-500";
 
   return (
-    <div
-      className={`max-w-4xl  rounded-lg overflow-hidden shadow-xl ${colour} sm:w-500`}
+    <button
+      className={`max-w-4xl  rounded-lg overflow-hidden shadow-xl ${bgColour} sm:w-500 transition duration-300 ease-in-out transform hover:scale-105 hover:${hoverColour} cursor-pointer`}
     >
       <div className="text-white text-center py-3">
-        <h2 className="font-bold text-xl">{title}</h2>
+        <h2 className="font-bold text-xl text-gray-100 text-shadow-lg">
+          {title}
+        </h2>
       </div>
       <div className="p-4">
         <p className="text-gray-800 dark:text-gray-200">
@@ -31,7 +29,7 @@ const RaceCard = ({ title, distance, ascent }: RaceDetailProps) => {
           <span className="font-semibold">Ascent:</span> {ascent} m+
         </p>
       </div>
-    </div>
+    </button>
   );
 };
 

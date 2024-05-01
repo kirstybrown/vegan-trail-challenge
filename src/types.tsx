@@ -11,4 +11,5 @@ export type RaceItem = {
   distance: string;
   ascent: string;
   colour: string;
+  path: string;
 };
