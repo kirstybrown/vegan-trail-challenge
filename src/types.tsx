@@ -10,5 +10,5 @@ export type RaceItem = {
   title: string;
   distance: string;
   ascent: string;
-  photo: string;
+  colour: string;
 };

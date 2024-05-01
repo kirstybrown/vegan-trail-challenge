@@ -1,31 +1,37 @@
-import Image from "next/image";
-
-type RaceCardProps = {
+type RaceDetailProps = {
   title: string;
   distance: string;
   ascent: string;
-  photo: string;
+  colour: string;
 };
 
-const RaceCard = ({ title, distance, ascent, photo }: RaceCardProps) => {
+const RaceCard = ({ title, distance, ascent }: RaceDetailProps) => {
+  const raceColours: { [key: string]: string } = {
+    MINI: "bg-blue-500",
+    HALF: "bg-green-500",
+    MARATHON: "bg-yellow-500",
+    ULTRA: "bg-purple-500",
+  };
+
+  const defaultColour = "bg-gray-500";
+  const colour = raceColours[title] || defaultColour;
+
   return (
-    <>
-      <div className="max-w-md rounded overflow-hidden shadow-lg sm:w-100">
-        <Image
-          className="w-full"
-          src={photo}
-          alt={title}
-          width={100}
-          height={50}
-        />
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2 text-center">{title}</div>
-          <p className="text-gray-700 text-base text-center">
-            Distance: {distance}km | Ascent: {ascent}m+
-          </p>
-        </div>
+    <div
+      className={`max-w-4xl  rounded-lg overflow-hidden shadow-xl ${colour} sm:w-500`}
+    >
+      <div className="text-white text-center py-3">
+        <h2 className="font-bold text-xl">{title}</h2>
       </div>
-    </>
+      <div className="p-4">
+        <p className="text-gray-800 dark:text-gray-200">
+          <span className="font-semibold">Distance:</span> {distance} km
+        </p>
+        <p className="text-gray-800 dark:text-gray-200">
+          <span className="font-semibold">Ascent:</span> {ascent} m+
+        </p>
+      </div>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import { RACE_DETAILS } from "@/constants";
 import RaceCard from "./race-card";
 
-const RacesPage = () => {
+const RacesSummary = () => {
   return (
     <>
       <h1>RacesPage</h1>
@@ -11,11 +11,11 @@ const RacesPage = () => {
           title={race.title}
           distance={race.distance}
           ascent={race.ascent}
-          photo={race.photo}
+          colour={race.colour}
         />
       ))}
     </>
   );
 };
 
-export default RacesPage;
+export default RacesSummary;
